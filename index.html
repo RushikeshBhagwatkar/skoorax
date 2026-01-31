@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkooraX | Intelligent Digital Marketing</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary-color: #0d6efd; /* Standard Blue */
+            --secondary-color: #2c3e50; /* Dark Blue/Gray */
+            --light-bg: #f8f9fa;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Headings use the Tech font to match your logo */
+        h1, h2, h3, h4, h5, .navbar-brand {
+            font-family: 'Orbitron', sans-serif;
+            letter-spacing: 0.5px;
+        }
+
+        /* Navbar */
+        .navbar {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            padding: 160px 0 100px 0;
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Service Cards */
+        .service-card {
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            border-color: var(--primary-color);
+        }
+        .icon-box {
+            width: 70px; height: 70px;
+            background: rgba(13, 110, 253, 0.1);
+            color: var(--primary-color);
+            display: flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+
+        /* Automation Section */
+        .automation-section {
+            background-color: var(--light-bg);
+        }
+        .feature-box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+            height: 100%;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        /* Testimonials */
+        .testimonial-card {
+            background: #fff;
+            border-left: 5px solid var(--primary-color);
+            padding: 40px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        /* Contact Section */
+        .contact-info-box {
+            background: var(--secondary-color);
+            color: white;
+            border-radius: 10px;
+            padding: 40px;
+        }
+        .contact-info-box a { color: white; text-decoration: none; }
+        
+        /* Footer */
+        footer { background-color: #212529; color: white; }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-3 text-dark" href="#">
+                <!-- <img src="logo.png" alt="SkooraX" height="40" class="d-inline-block align-text-top me-2" onerror="this.style.display='none'"> -->
+                <span class="align-middle">SKOORA<span class="text-primary">X</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link text-dark" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#automation">Automation</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark" href="#reviews">Reviews</a></li>
+                    <li class="nav-item ms-3">
+                        <a class="btn btn-primary px-4 rounded-pill" href="#contact">Get Proposal</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-9">
+                    <h6 class="text-uppercase text-primary fw-bold mb-3 ls-2">Digital Intelligence</h6>
+                    <h1 class="display-3 fw-bold mb-4 text-dark">GROW REVENUE WITH <br><span class="text-primary">AUTOMATION</span></h1>
+                    <p class="lead text-muted mb-5 w-75 mx-auto">SkooraX combines creative strategy with AI automation to drive leads, manage content, and scale your business on autopilot.</p>
+                    <div class="d-flex justify-content-center gap-3">
+                        <a href="#contact" class="btn btn-primary btn-lg rounded-pill px-5">Start Project</a>
+                        <a href="#services" class="btn btn-outline-dark btn-lg rounded-pill px-5">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="clients" class="py-5 bg-white border-bottom">
+        <div class="container text-center">
+            <p class="text-muted fw-bold mb-4 text-uppercase small">Trusted by Industry Leaders</p>
+            <div class="row justify-content-center align-items-center opacity-50">
+                <div class="col-6 col-md-2 mb-3"><i class="fab fa-google fa-2x"></i></div>
+                <div class="col-6 col-md-2 mb-3"><i class="fab fa-amazon fa-2x"></i></div>
+                <div class="col-6 col-md-2 mb-3"><i class="fab fa-microsoft fa-2x"></i></div>
+                <div class="col-6 col-md-2 mb-3"><i class="fab fa-spotify fa-2x"></i></div>
+                <div class="col-6 col-md-2 mb-3"><i class="fab fa-airbnb fa-2x"></i></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5">
+                <h6 class="text-primary fw-bold text-uppercase">Our Expertise</h6>
+                <h2 class="fw-bold display-5">Full Stack Growth</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="icon-box"><i class="fas fa-rocket"></i></div>
+                        <h4>SEO & Organic</h4>
+                        <p class="text-muted">Rank #1 on Google. We optimize your site structure and content to drive free, high-quality traffic.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="icon-box"><i class="fas fa-chart-pie"></i></div>
+                        <h4>Paid Ads (PPC)</h4>
+                        <p class="text-muted">High-ROI campaigns on Google Ads and Meta. We target your ideal customer with precision.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="service-card">
+                        <div class="icon-box"><i class="fas fa-magic"></i></div>
+                        <h4>Content Strategy</h4>
+                        <p class="text-muted">Blogs, whitepapers, and videos that establish your authority and convert readers into buyers.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="automation" class="py-5 automation-section">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-5 mb-4 mb-lg-0">
+                    <h6 class="text-primary fw-bold text-uppercase">The Future is Now</h6>
+                    <h2 class="fw-bold display-5 mb-4">Marketing Automation</h2>
+                    <p class="lead text-muted">Stop doing manual work. We set up systems that work 24/7.</p>
+                    <ul class="list-unstyled mt-4">
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> <strong>Content Automation:</strong> AI-driven scheduling.</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> <strong>Cold Outreach:</strong> Automated LinkedIn & Email sequences.</li>
+                        <li class="mb-3"><i class="fas fa-check-circle text-success me-2"></i> <strong>CRM Integration:</strong> Sync leads instantly.</li>
+                    </ul>
+                </div>
+                <div class="col-lg-6 offset-lg-1">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <div class="feature-box">
+                                <i class="fab fa-linkedin fa-3x text-primary mb-3"></i>
+                                <h5>LinkedIn Outreach</h5>
+                                <p class="small text-muted">Auto-connect and message target prospects safely.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="feature-box">
+                                <i class="fas fa-envelope-open-text fa-3x text-warning mb-3"></i>
+                                <h5>Drip Campaigns</h5>
+                                <p class="small text-muted">Nurture leads with automated email sequences.</p>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="feature-box mt-3">
+                                <i class="fas fa-robot fa-3x text-secondary mb-3"></i>
+                                <h5>AI Content Creation</h5>
+                                <p class="small text-muted">Generate captions, blogs, and graphics instantly using custom AI models.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section py-5 text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h2 class="display-4 fw-bold">20+</h2>
+                    <p class="mb-0 text-white-50">Projects Completed</p>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h2 class="display-4 fw-bold">10x</h2>
+                    <p class="mb-0 text-white-50">ROI Average</p>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h2 class="display-4 fw-bold">24/7</h2>
+                    <p class="mb-0 text-white-50">Automation Uptime</p>
+                </div>
+                <div class="col-md-3">
+                    <h2 class="display-4 fw-bold">10+</h2>
+                    <p class="mb-0 text-white-50">Happy Clients</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="py-5">
+        <div class="container py-5">
+            <h2 class="text-center fw-bold mb-5">Client Success Stories</h2>
+            <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <div class="testimonial-card">
+                                    <p class="fs-5 fst-italic text-muted">"Their automation services changed our business. We went from sending 10 emails a day to reaching 500 prospects automatically. The ROI was instant."</p>
+                                    <div class="mt-4">
+                                        <h5 class="fw-bold mb-0">Sarah Jenkins</h5>
+                                        <small class="text-muted">CEO, TechStart Inc.</small>
+                                        <div class="text-warning small mt-1">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="row justify-content-center">
+                            <div class="col-md-8">
+                                <div class="testimonial-card">
+                                    <p class="fs-5 fst-italic text-muted">"The content creation team is amazing. They handle everything from our blogs to LinkedIn posts. Highly recommended!"</p>
+                                    <div class="mt-4">
+                                        <h5 class="fw-bold mb-0">Rahul Mehta</h5>
+                                        <small class="text-muted">Founder, Mehta Logistics</small>
+                                        <div class="text-warning small mt-1">
+                                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-white">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-5">
+                    <div class="contact-info-box h-100 shadow-sm">
+                        <h3 class="fw-bold mb-4">Start Your Project</h3>
+                        <p class="mb-5 opacity-75">Ready to modernize? Fill out the form or reach us directly.</p>
+                        
+                        <div class="d-flex align-items-start mb-4">
+                            <i class="fas fa-map-marker-alt fa-lg mt-1 me-3"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">HQ</h6>
+                                <p class="mb-0 opacity-75">123 Business Park, Pune, MH 411045</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start mb-4">
+                            <i class="fas fa-envelope fa-lg mt-1 me-3"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">Email</h6>
+                                <a href="mailto:hello@skoorax.com" class="opacity-75">hello@skoorax.com</a>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-start mb-5">
+                            <i class="fas fa-phone-alt fa-lg mt-1 me-3"></i>
+                            <div>
+                                <h6 class="fw-bold mb-1">Phone</h6>
+                                <a href="tel:+919876543210" class="opacity-75">+91 98765 43210</a>
+                            </div>
+                        </div>
+
+                        <div class="mt-auto">
+                            <h6 class="fw-bold mb-3">Connect</h6>
+                            <div class="d-flex gap-3">
+                                <a href="#" class="text-white"><i class="fab fa-linkedin fa-2x"></i></a>
+                                <a href="#" class="text-white"><i class="fab fa-instagram fa-2x"></i></a>
+                                <a href="#" class="text-white"><i class="fab fa-twitter fa-2x"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7">
+                    <div class="p-4 bg-light rounded shadow-sm">
+                        <h3 class="fw-bold mb-4">Send a Message</h3>
+                        
+                        <form action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Name</label>
+                                    <input type="text" name="name" class="form-control" placeholder="John Doe" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label">Phone</label>
+                                    <input type="text" name="phone" class="form-control" placeholder="+91..." required>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Email</label>
+                                <input type="email" name="email" class="form-control" placeholder="john@company.com" required>
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label">Service Required</label>
+                                <select name="service" class="form-select">
+                                    <option>Marketing Automation</option>
+                                    <option>SEO & Organic Growth</option>
+                                    <option>Paid Ads</option>
+                                    <option>Content Creation</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label">Project Details</label>
+                                <textarea name="message" class="form-control" rows="5" placeholder="Tell us about your project..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary w-100 py-2">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="ratio ratio-21x9 rounded overflow-hidden shadow-sm">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.1!2d73.85!3d18.52!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDMxJzEyLjAiTiA3M8KwNTEnMDAuMCJF!5e0!3m2!1sen!2sin!4v1600000000000" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="py-4 text-center">
+        <div class="container">
+            <p class="mb-0">© 2026 SkooraX. All Rights Reserved.</p>
+            <small class="text-white-50">Designed for Performance.</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
